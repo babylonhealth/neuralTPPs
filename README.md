@@ -1,6 +1,6 @@
 # Neural Temporal Point Processes (Neural TPPs)
 
-We present in this repository code to train, evaluate and visualise (multi-class) Temporal Point Processes (TPPs).
+We present in this repository code to train, evaluate and visualise (multi-class) Temporal Point Processes (TPPs), as described in our paper:
 
 ## Contact
 + Joseph Enguehard [joseph.enguehard@babylonhealth.com](mailto:joseph.enguehard@babylonhealth.com)
@@ -22,6 +22,9 @@ Our pre-trained models can be found here: https://drive.google.com/drive/folders
 ## Data
 Our preprocessed data can be found here: https://drive.google.com/drive/folders/1KZXUofQ6_jsUzRK4Oh049TVuUe5_ULGS?usp=sharing.
 We do not provide the data for Hawkes (dependent) and Hawkes (independent) as they are deterministically generated during training time.
+
+## Cite
+Please cite our paper if you use this code in your own work:
 
 ## Relevant reading
 ### Lecture notes
