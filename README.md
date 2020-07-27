@@ -3,7 +3,6 @@
 We present in this repository code to train, evaluate and visualise (multi-class) Temporal Point Processes (TPPs).
 
 ## Contact
-+ Dan Busbridge [dan.busbridge@babylonhealth.com](mailto:dan.busbridge@babylonhealth.com)
 + Joseph Enguehard [joseph.enguehard@babylonhealth.com](mailto:joseph.enguehard@babylonhealth.com)
 
 ## The aim of this work
@@ -11,6 +10,18 @@ We want to allow Machine Learning (ML) to use Electronic Health Records (EHRs) i
 + *Forecast*, i.e. predict the future health interactions of a patient given their medical history,
 + *Impute/interpolate*, i.e. highlight and determine missing data in a patient EHR,
 + *Represent*, i.e. provide representations for EHRs so they can be searched/retrieved semantically/efficiently.
+
+## Brief description of our models
+Our Neural TPP models are integrated into an encoder-decoder architecture framework.
+Our encoders can be found in `tpp/models/encoders`, and our decoders in `tpp/models/decoders`.
+Our encoders inherit from the abstract class defined in `tpp/models/encoders/base/encoder.py`.
+Our decoders inherit from the abstract class defined in `tpp/models/decoders/base/decoder.py`.
+These encoders and decoders are combined into a single model in `tpp/model/enc_dec.py`, where the intensity function and the likelihood are computed.
+Our pre-trained models can be found here: https://drive.google.com/drive/folders/1LTkErAAEy7ZjX9HuRDMBb8PBzsqtHotR?usp=sharing.
+
+## Data
+Our preprocessed data can be found here: https://drive.google.com/drive/folders/1KZXUofQ6_jsUzRK4Oh049TVuUe5_ULGS?usp=sharing.
+We do not provide the data for Hawkes (dependent) and Hawkes (independent) as they are deterministically generated during training time.
 
 ## Relevant reading
 ### Lecture notes
@@ -338,9 +349,6 @@ optional arguments:
 ```
 
 ### General usage - evaluating a trained model
-
-Our pre-trained models can be found in the models directory. The scripts we
-ran to create them can be found in the runs directory.
 
 ```
 usage: scripts/evaluate.py [-h] [--model-dir MODEL_DIR] [--seed SEED]
