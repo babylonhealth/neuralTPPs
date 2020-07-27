@@ -1,0 +1,1 @@
+--editable="git+https://github.com/aliutkus/torchsearchsorted.git@5e70e9f7491ab39b386963264e84492ab4c099c1#egg=torchsearchsorted"

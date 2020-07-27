@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: interactive-pod
+  namespace: neural-tpps
+spec:
+  nodeSelector:
+    accelerator: nvidia-tesla-v100
+  tolerations:
+    - key: "nvidia.com/gpu"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+  containers:
+  - name: neural-tpps
+    image: placeholder_img
+    # Just spin & wait forever
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;" ]
+    volumeMounts:
+    - mountPath: /mnt
+      name: efs-test-storage
+    resources:
+      requests:
+        nvidia.com/gpu: 1
+        memory: "60800Mi"
+        cpu: "7500m"
+      limits:
+        nvidia.com/gpu: 1
+        memory: "60800Mi"
+        cpu: "7500m"
+  volumes:
+  - name: efs-test-storage
+    persistentVolumeClaim:
+      claimName: efs
+  imagePullSecrets:
+    - name: babylonhealth-deploy-pull-secret

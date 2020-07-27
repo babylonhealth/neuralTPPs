@@ -1,0 +1,12 @@
+Neural Temporal Point Processes
+Copyright 2020 Babylon Partners Limited
+
+This repository includes software developed at
+Babylon Partners Limited.
+
+This repository contains code derived from
+https://github.com/woshiyyya/ERPP-RMTPP and
+https://github.com/xiao03/nh
+
+This software contains code derived from Tick
+https://x-datainitiative.github.io/tick/

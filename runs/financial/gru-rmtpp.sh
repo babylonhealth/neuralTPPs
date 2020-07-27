@@ -1,0 +1,137 @@
+#!/bin/zsh
+
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name financial-split-1 \
+  --run-name gru-rmtpp \
+  --batch-size 2 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/baseline/financial/split_1 \
+  --plots-dir /home/air/project/neural-tpps/plots/financial_1/gru_rmtpp \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder gru \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name financial-split-2 \
+  --run-name gru-rmtpp \
+  --batch-size 2 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/baseline/financial/split_2 \
+  --plots-dir /home/air/project/neural-tpps/plots/financial_2/gru_rmtpp \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder gru \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name financial-split-3 \
+  --run-name gru-rmtpp \
+  --batch-size 2 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/baseline/financial/split_3 \
+  --plots-dir /home/air/project/neural-tpps/plots/financial_3/gru_rmtpp \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder gru \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name financial-split-4 \
+  --run-name gru-rmtpp \
+  --batch-size 2 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/baseline/financial/split_4 \
+  --plots-dir /home/air/project/neural-tpps/plots/financial_4/gru_rmtpp \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder gru \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name financial-split-5 \
+  --run-name gru-rmtpp \
+  --batch-size 2 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/baseline/financial/split_5 \
+  --plots-dir /home/air/project/neural-tpps/plots/financial_5/gru_rmtpp \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder gru \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \

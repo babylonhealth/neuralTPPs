@@ -1,0 +1,37 @@
+FROM ufoym/deepo:pytorch-py36-cu100
+
+# Favourite shell and text editor
+RUN apt-get update && apt-get install -y \
+    nano \
+    wget \
+    gcc \
+    zsh \
+    graphviz \
+    autotools-dev \
+    automake \
+    gawk \
+    bison \
+    flex \
+ && rm -rf /var/lib/apt/lists/*
+
+# Oh My Zsh
+RUN sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Build and install swig
+RUN git clone https://github.com/swig/swig -b rel-4.0.0 /swig
+WORKDIR /swig
+RUN ./autogen.sh && ./configure --without-pcre
+RUN make
+RUN make install
+WORKDIR /root
+
+# Build and install tick
+RUN pip install --upgrade pip
+COPY requirements-tick.txt /neural-tpps/requirements-tick.txt
+RUN pip install -r /neural-tpps/requirements-tick.txt
+RUN git clone https://github.com/X-DataInitiative/tick.git /tick
+WORKDIR /tick
+RUN git checkout v0.6
+RUN git submodule update --init
+RUN python setup.py build install
+WORKDIR /root

@@ -1,0 +1,152 @@
+#!/bin/zsh
+
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name ear-infection-split-1 \
+  --run-name sa-rmtpp \
+  --batch-size 512 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/synthea/ear_infection/split_1 \
+  --plots-dir /home/air/project/neural-tpps/plots/ear_infection_1/sa_rmtpp \
+  --time-scale 1e-5 \
+  --save-model-freq 25 \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder selfattention \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-attn-activation softmax \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name ear-infection-split-2 \
+  --run-name sa-rmtpp \
+  --batch-size 512 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/synthea/ear_infection/split_2 \
+  --plots-dir /home/air/project/neural-tpps/plots/ear_infection_2/sa_rmtpp \
+  --time-scale 1e-5 \
+  --save-model-freq 25 \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder selfattention \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-attn-activation softmax \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name ear-infection-split-3 \
+  --run-name sa-rmtpp \
+  --batch-size 512 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/synthea/ear_infection/split_3 \
+  --plots-dir /home/air/project/neural-tpps/plots/ear_infection_3/sa_rmtpp \
+  --time-scale 1e-5 \
+  --save-model-freq 25 \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder selfattention \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-attn-activation softmax \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name ear-infection-split-4 \
+  --run-name sa-rmtpp \
+  --batch-size 512 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/synthea/ear_infection/split_4 \
+  --plots-dir /home/air/project/neural-tpps/plots/ear_infection_4/sa_rmtpp \
+  --time-scale 1e-5 \
+  --save-model-freq 25 \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder selfattention \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-attn-activation softmax \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
+
+python scripts/train.py \
+  --remote-server-uri "http://mlflow-tracking.neural-tpps.svc.cluster.local" \
+  --experiment-name ear-infection-split-5 \
+  --run-name sa-rmtpp \
+  --batch-size 512 \
+  --data-dir /home/air/project/neural-tpps/data \
+  --load-from-dir /home/air/project/neural-tpps/data/synthea/ear_infection/split_5 \
+  --plots-dir /home/air/project/neural-tpps/plots/ear_infection_5/sa_rmtpp \
+  --time-scale 1e-5 \
+  --save-model-freq 25 \
+  --lr-rate-init 1e-2 \
+  --lr-poisson-rate-init 1e-2 \
+  --lr-scheduler-warmup 10 \
+  --train-epochs 501 \
+  --patience 500 \
+  --encoder selfattention \
+  --encoder-encoding learnable_with_labels \
+  --encoder-emb-dim 32 \
+  --encoder-attn-activation softmax \
+  --encoder-units-rnn 32 \
+  --encoder-units-mlp 32 \
+  --encoder-activation-final-mlp relu \
+  --decoder rmtpp \
+  --decoder-encoding learnable \
+  --decoder-emb-dim 32 \
+  --decoder-units-rnn 32 \
+  --decoder-units-mlp 32 \
+  --include-poisson False \
+  \
