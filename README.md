@@ -1,7 +1,8 @@
 # Neural Temporal Point Processes (Neural TPPs)
 
 We present in this repository code to train, evaluate and visualise (multi-class) Temporal Point Processes (TPPs), as described in our paper:
-Joseph Enguehard, Dan Busbridge, Adam Bozson, Claire Woodcock, Nils Y. Hammerla, [Neural Temporal Point Processes For Modelling Electronic Health Records](https://arxiv.org/pdf/2007.13794)
+
+Joseph Enguehard, Dan Busbridge, Adam Bozson, Claire Woodcock, Nils Y. Hammerla, [Neural Temporal Point Processes For Modelling Electronic Health Records](https://arxiv.org/abs/2007.13794)
 
 ## Contact
 + Joseph Enguehard [joseph.enguehard@babylonhealth.com](mailto:joseph.enguehard@babylonhealth.com)
