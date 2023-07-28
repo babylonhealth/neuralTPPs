@@ -1,7 +1,7 @@
 NAME=ml-kubeflow
 TAG_PREFIX=neural-tpps
 VERSION=$(shell git rev-parse HEAD)
-REPO=quay.io/babylonhealth
+REPO=babylon.jfrog.io/classic-dev-docker-virtual/babylonhealth
 TAG=$(TAG_PREFIX)-$(VERSION)
 IMAGE=$(REPO)/$(NAME):$(TAG)
 IMAGE_BASE=$(REPO)/$(NAME):$(TAG_PREFIX)-base

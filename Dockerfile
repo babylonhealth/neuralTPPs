@@ -1,5 +1,5 @@
-FROM quay.io/babylonhealth/envoy-preflight:latest as builder
-FROM quay.io/babylonhealth/ml-kubeflow:neural-tpps-base
+FROM babylon.jfrog.io/classic-dev-docker-virtual/babylonhealth/envoy-preflight:latest as builder
+FROM babylon.jfrog.io/classic-dev-docker-virtual/babylonhealth/ml-kubeflow:neural-tpps-base
 COPY --from=builder /envoy-preflight /envoy-preflight
 
 ENV DEBIAN_FRONTEND=noninteractive
